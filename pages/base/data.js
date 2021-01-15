@@ -159,6 +159,18 @@ export let browser = [
   4. 多用class 少用id
       `,
   },
+  {
+    title: "前端SEO",
+    msg: `
+1. 准确的网页标题 title
+2. 使用 meta 元标签  keywords和description要准确
+3. 使用语义化元素
+4. 利用 img 中的 alt 属性
+5. html css js 样式分离
+6. 重要内容放在html最前面
+7. 速度 / 性能直接影响 SEO
+      `,
+  },
 ];
 
 export let server = [
@@ -222,13 +234,29 @@ export let html = [
 
 1. 标准模式：遵循最新标准
 2. 怪异/兼容模式：处理所有奇怪的渲染及不符合标准的网页。
-    1. 先在内存中查找,如果有,直接加载。
-    2. 如果内存中不存在,则在硬盘中查找,如果有直接加载。
-    3. 如果硬盘中也没有,那么就进行网络请求。
-    4. 请求获取的资源缓存到硬盘和内存。
 3. 强制触发怪异模式
     1. 丢失的 URL
     2. 没有使用或格式错误的 DOCTYPE
+`,
+  },
+  {
+    title: "标准模式和怪异模式区别",
+    msg: `
+1. 标准盒模型：width = width + 2margin + 2padding + 2*border 
+2. 怪异(ie)盒模型：width(content) 部分包含了 border 和 padding  注意：margin不包括
+3. 切换盒模型： 
+    1. 怪异盒模型：box-sizing："border-box"  
+    2. 标准盒模型：box-sizing："content-box"
+`,
+  },
+  {
+    title: "行内元素有哪些?块级元素有哪些?怎么改变？",
+    msg: `
+1. 块级元素：div h1--h4 hr ul li
+2. 行内元素: span img input i a em  
+3. 切换元素类型： 
+    1. 块级元素：display：block  
+    2. 行内元素：display：inline
 `,
   },
 ];
