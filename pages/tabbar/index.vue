@@ -46,7 +46,7 @@ export default {
         },
         {
           title: "html",
-          id: "3",
+          id: "html",
           //   name: "text",
           color: "purple",
           //   cuIcon: "font",

@@ -33,8 +33,7 @@
 
 <script>
 import MDParserHighlight from "components/cmder-MDParserHighlight/index.vue";
-import { browser } from "./browser";
-import { server } from "./server";
+import * as dataMsg from "./data";
 export default {
   components: {
     MDParserHighlight,
@@ -50,10 +49,10 @@ export default {
   onLoad: function (option) {
     //option为object类型，会序列化上个页面传递的参数
     this.title = option.title;
-    let pages = { browser, server };
-    for (const item in pages) {
+
+    for (const item in dataMsg) {
       if (item === option.id) {
-        this.elements = pages[item];
+        this.elements = dataMsg[item];
         break;
       }
     }
