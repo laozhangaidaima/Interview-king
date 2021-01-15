@@ -2,7 +2,7 @@
 	<view>
 		<cu-custom bgColor="bg-gradual-pink" :isBack="true"><block slot="backText">返回</block><block slot="content">导航栏</block></cu-custom>
 		<view v-for="(item,index) in 10" :key="index" v-if="index==TabCur" class="bg-grey padding margin text-center">
-			Tab{{index}}
+			Tab{{index}}	
 		</view>
 		<view class="cu-bar bg-white solid-bottom">
 			<view class="action">

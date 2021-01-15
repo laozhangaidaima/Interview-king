@@ -6,7 +6,7 @@
       <view class="nav-list">
         <navigator
           hover-class="none"
-          :url="'/pages/basics/' + item.name"
+          :url="'/pages/base/index' + '?title=' + item.title + '&id=' + item.id"
           class="nav-li"
           navigateTo
           :class="'bg-' + item.color"
@@ -15,11 +15,11 @@
           :key="index"
         >
           <view class="nav-title">{{ item.title }}</view>
-          <view >{{ item.name }}</view>
+          <view>{{ item.name }}</view>
           <text :class="'cuIcon-' + item.cuIcon"></text>
         </navigator>
       </view>
-      <view class="cu-tabbar-height"></view>
+      <!-- <view class="cu-tabbar-height"></view> -->
     </scroll-view>
   </view>
 </template>
@@ -32,91 +32,115 @@ export default {
       elements: [
         {
           title: "浏览器",
-        //   name: "layout",
+          id: "browser",
+          //   name: "layout",
           color: "cyan",
-        //   cuIcon: "newsfill",
+          //   cuIcon: "newsfill",
         },
         {
           title: "服务器",
-        //   name: "background",
+          id: "server",
+          //   name: "background",
           color: "blue",
-        //   cuIcon: "colorlens",
+          //   cuIcon: "colorlens",
         },
         {
           title: "html",
-        //   name: "text",
+          id: "3",
+          //   name: "text",
           color: "purple",
-        //   cuIcon: "font",
+          //   cuIcon: "font",
         },
         {
           title: "css ",
-        //   name: "icon",
+          id: "4",
+          //   name: "icon",
           color: "mauve",
-        //   cuIcon: "cuIcon",
+          //   cuIcon: "cuIcon",
         },
         {
           title: "js",
-        //   name: "button",
+          id: "5",
+          //   name: "button",
           color: "pink",
-        //   cuIcon: "btn",
+          //   cuIcon: "btn",
         },
         {
           title: "vue",
-        //   name: "tag",
+          id: "6",
+          //   name: "tag",
           color: "brown",
-        //   cuIcon: "tagfill",
+          //   cuIcon: "tagfill",
         },
         {
           title: "组件化开发",
-        //   name: "avatar",
+          id: "7",
+          //   name: "avatar",
           color: "red",
-        //   cuIcon: "myfill",
+          //   cuIcon: "myfill",
         },
         {
           title: "兼容性方案",
-        //   name: "progress",
+          id: "8",
+          //   name: "progress",
           color: "orange",
-        //   cuIcon: "icloading",
+          //   cuIcon: "icloading",
         },
         {
           title: "设计模式",
-        //   name: "shadow",
+          id: "9",
+          //   name: "shadow",
           color: "olive",
-        //   cuIcon: "copy",
+          //   cuIcon: "copy",
         },
         {
           title: "模块化开发",
-        //   name: "loading",
+          id: "10",
+          //   name: "loading",
           color: "green",
-        //   cuIcon: "loading2",
+          //   cuIcon: "loading2",
         },
         {
           title: "面向对象",
-        //   name: "loading",
+          id: "11",
+          //   name: "loading",
           color: "grey",
-        //   cuIcon: "loading2",
+          //   cuIcon: "loading2",
         },
         {
           title: "执行顺序",
-        //   name: "loading",
+          id: "12",
+          //   name: "loading",
           color: "black",
-        //   cuIcon: "loading2",
+          //   cuIcon: "loading2",
         },
         {
           title: "事件队列",
-        //   name: "loading",
+          id: "13",
+          //   name: "loading",
           color: "grey",
-        //   cuIcon: "loading2",
-        }, {
+          //   cuIcon: "loading2",
+        },
+        {
           title: "mvvm和mvc",
-        //   name: "loading",
+          id: "14",
+          //   name: "loading",
           color: "pink",
-        //   cuIcon: "loading2",
-        },{
+          //   cuIcon: "loading2",
+        },
+        {
           title: "单元测试",
-        //   name: "loading",
+          id: "15",
+          //   name: "loading",
           color: "mauve",
-        //   cuIcon: "loading2",
+          //   cuIcon: "loading2",
+        },
+        {
+          title: "代码质量",
+          id: "16",
+          //   name: "loading",
+          color: "olive",
+          //   cuIcon: "loading2",
         },
       ],
     };
@@ -130,5 +154,6 @@ export default {
 <style>
 .page {
   height: 100vh;
+  /* margin-top: 200upx; */
 }
 </style>

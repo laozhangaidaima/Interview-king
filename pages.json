@@ -107,7 +107,16 @@
 			"style": {}
 		}
 
-	],
+	    ,{
+            "path" : "pages/base/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"mp-alipay": {
 			/* 支付宝小程序特有相关 */
