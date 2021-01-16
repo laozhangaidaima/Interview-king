@@ -52,22 +52,22 @@ export default {
           //   cuIcon: "font",
         },
         {
-          title: "css ",
-          id: "4",
+          title: "css",
+          id: "css",
           //   name: "icon",
           color: "mauve",
           //   cuIcon: "cuIcon",
         },
         {
           title: "js",
-          id: "5",
+          id: "js",
           //   name: "button",
           color: "pink",
           //   cuIcon: "btn",
         },
         {
           title: "vue",
-          id: "6",
+          id: "vue",
           //   name: "tag",
           color: "brown",
           //   cuIcon: "tagfill",
@@ -102,7 +102,7 @@ export default {
         },
         {
           title: "面向对象",
-          id: "11",
+          id: "object",
           //   name: "loading",
           color: "grey",
           //   cuIcon: "loading2",
@@ -123,7 +123,7 @@ export default {
         },
         {
           title: "mvvm和mvc",
-          id: "14",
+          id: "mvvm",
           //   name: "loading",
           color: "pink",
           //   cuIcon: "loading2",
@@ -137,7 +137,7 @@ export default {
         },
         {
           title: "代码质量",
-          id: "16",
+          id: "codeReview",
           //   name: "loading",
           color: "olive",
           //   cuIcon: "loading2",

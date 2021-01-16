@@ -15,10 +15,32 @@
 
 
 # 测试
-- 作用是：告诉浏览器用怪异模式还是标准模式解析
 
-1. 标准盒模型：width = width + 2margin + 2padding + 2*border 
-2. 怪异(ie)盒模型：width(content) 部分包含了 border 和 padding  注意：margin不包括
-3. 切换盒模型：box-sizing："border-box"  
-   1. 怪异盒模型：box-sizing："border-box"  
-   2. 标准盒模型：box-sizing："content-box"
+CSS 有哪些继承属性
+- 作用是：所有HTML元素共有的属性
+
+1. accesskey:设置快捷键
+2. class:类名
+3. id: 元素 id，文档内唯一
+4. contenteditable：是否可编辑
+5. contextmenu: 自定义鼠标右键弹出菜单内容
+6. data-*: 为元素增加自定义属性
+7. draggable: 设置元素是否可拖拽
+8. style: 行内 css 样式
+9. title: 元素相关的建议信息
+
+- 关于文字排版的属性如：
+  - font
+  - word-break
+  - letter-spacing
+  - text-align
+  - text-rendering
+  - word-spacing
+  - white-space
+  - text-indent
+  - text-transform
+  - text-shadow
+- line-height
+- color
+- visibility
+- cursor
