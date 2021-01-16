@@ -12,7 +12,7 @@ export default {
           Vue.prototype.CustomBar = e.statusBarHeight + 45;
         }
         // #endif
-
+ 
         // #ifdef MP-WEIXIN
         Vue.prototype.StatusBar = e.statusBarHeight;
         let custom = wx.getMenuButtonBoundingClientRect();

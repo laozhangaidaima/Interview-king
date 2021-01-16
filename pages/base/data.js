@@ -267,6 +267,111 @@ let dataMsg = [
      `,
     type: "object",
   },
+  {
+    title: "模块化规范有哪些？好处？",
+    msg: `  
+- 包括：CommonJS AMD CMD UMD 原生js模块化
+- 好处：代码复用 可维护性好 依赖管理 避免变量名污染
+- 模块就是实现特定功能的文件
+     `,
+    type: "module",
+  },
+  {
+    title: "CommonJS、AMD、CMD、UMD、原生模块化是什么？",
+    msg: `  
+- CommonJS(服务器端模块的规范)
+  - 服务器端模块的规范，Node.js采用了这个规范。
+  - require 和 module.exports
+  - 加载完成才能执行后面的操作
+  - 一个单独的文件就是一个模块。加载模块使用require方法，该方法读取一个文件并执行，最后返回文件内部的exports对象。
+
+- AMD(异步模块定义)
+  - define方法定义模块
+- CMD(通用模块定义)
+  - define方法定义模块
+  - 区别：对于依赖的模块AMD是提前执行，CMD是延迟执行。 CMD推崇依赖就近，AMD推崇依赖前置
+- UMD
+  - UMD是CommonJS和AMD的综合产物
+  - 先判断是否支持Node.js的模块（exports）是否存在，存在则使用Node.js模块模式。
+  - 在判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块。
+- 原生JS模块化（Native JS） es6
+  - import export
+     `,
+    type: "module",
+  },
+  {
+    title: "怎么设计一个组件？",
+    msg: `  
+- 专一：一个组件只专注做一件事，且把这件事做好。
+- 可配置性：明确输入和输出分别是什么 不同参数不同表现
+- 传参的校验：是否正确 是否必须  当属性没有被设置时，就使用默认值。
+- 最好项目之初就决定好哪些部分需要抽离为组件
+- 出现三次就肯定要封装
+- 只依赖传参 容错高 耦合性低 不要用依赖vuex localstore 
+     `,
+    type: "component",
+  },
+  {
+    title: "上传组件到npm",
+    msg: `  
+- vue-cli搭建一个组件
+- 修改package.json 
+- 创建 npmignoore
+- 登录npm账号
+- npm publish 发布
+     `,
+    type: "component",
+  },
+  {
+    title: "为什么需要虚拟DOM?",
+    msg: `  
+- 前端性能优化是尽可能少地操作DOM
+- DOM操作相对较慢
+- 频繁变动DOM会造成浏览器的重绘或回流
+- 一次性将差异更新到DOM
+     `,
+    type: "vue",
+  },
+  {
+    title: "什么是虚拟DOM?",
+    msg: `  
+- 虚拟DOM就是用JS对象来表示或者是模拟一个真实DOM的结构。
+     `,
+    type: "vue",
+  },
+  {
+    title: "虚拟DOM的创建过程?",
+    msg: `  
+- 通过真实dom的信息 获取元素 子节点 html指令 props等信息
+- 通过解析器 把真实dom 编译为虚拟dom 形成树结构
+- 操作dom 把虚拟dom再编译为真实dom
+- 一次性将差异更新到DOM
+     `,
+    type: "vue",
+  },
+  {
+    title: "什么是双向绑定和单向绑定？",
+    msg: `  
+- MVVM数据双向绑定，即主要是：数据变化更新视图，视图变化更新数据。
+- 单向绑定：只有数据能改变视图 视图不能改变数据
+     `,
+    type: "vue",
+  },
+  {
+    title: "vue实现双向绑定",
+    msg: `  
+-  mvvm设计模式 v层和m层可以相互改变
+-  第一步：使数据对象变得“可观测”
+  - Object.defineProperty 第一次参数是对象 第二个参数是要监听的值 第三个参数是get set
+  - 知道了数据在什么时候被读或写了
+  - 通过遍历 把对象的每一个属性都监听到
+- 第二步：依赖收集
+  - 通过 发布订阅者 模式实现
+  - 所有依赖收集起来，一旦数据发生变化，就统一通知更新。
+  - 创建依赖收集容器，也就是消息订阅器Dep
+     `,
+    type: "vue",
+  },
 ];
 
 export default dataMsg;

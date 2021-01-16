@@ -50,16 +50,22 @@ export default {
     //option为object类型，会序列化上个页面传递的参数
     this.title = option.title;
     this.elements = dataMsg.filter((el) => el.type === option.id);
-    
+
+    document.addEventListener("click", (e) => {
+      if (e.target.getAttribute("class") === "cu-modal show") {
+        this.hideModal();
+      }
+    });
   },
   methods: {
     showModal(item) {
       this.modalData = item;
       this.modalName = "Modal";
     },
-    hideModal(e) {
+    hideModal() {
       this.modalName = null;
     },
+    
   },
 };
 </script>
