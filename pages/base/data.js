@@ -392,74 +392,93 @@ let dataMsg = [
      `,
     type: "browser",
   },
-  // 待完成
   {
     title: "垂直居中",
     msg: `  
-- position:absolute 
+- position:absolute和transform 
+  - 
 position  : absolute
 top       : 50%
 left      : 50%
 transform : translate(-50%,-50%)
-
+- flex
+  - 
+display: flex;
+justify-content: center; 
+align-items: center; 
+- 其他方法 需要知道父盒子宽高 通用性不强 不记
      `,
     type: "css",
   },
   {
-    title: "vue组件的销毁",
+    title: "vue组件什么时候被销毁",
     msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+- v-if='false'
+- 没有使用keep-alive时的路由切换。
+- 页面关闭
      `,
-    type: "browser",
-  },
-  {
-    title: "执行机制",
-    msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
-     `,
-    type: "browser",
-  },
-  {
-    title: "代码优化",
-    msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
-     `,
-    type: "browser",
+    type: "vue",
   },
   {
     title: "代码质量标准",
     msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+- 没有统一标准 
+- 按照团队规范
+- 可阅读性好
+- 别人能看懂 能维护
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "前端性能测试工具",
+    msg: `  
+- 谷歌开发者工具 time  
+- Lighthouse
+- SpeedCurve
+- Pingdom 输入url 在线测试
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "前端路由是什么",
+    msg: `  
+- url浏览器自己消化 不发给服务器
+- 可以监听到 url 的变化
      `,
     type: "browser",
   },
+  {
+    title: "实现hash路由",
+    msg: `  
+- 什么是hash？
+  - hash即URL中"#"字符后面的部分。
+  - hash值的改变不会导致页面重新加载。
+  - 通过window.location.hash属性获取和设置hash值。
+- 具体实现
+  - 切换路由：监听location.hash
+  - 创建路由对象：先定路由规则 根据规则切换页面
+  - 根据hash不同 切换页面
+     `,
+    type: "browser",
+  },
+  {
+    title: "前端性能测试指标",
+    msg: `  
+- 页面访问速度
+- 白屏
+- 首屏时间
+- 交互花费时间
+     `,
+    type: "codeReview",
+  },
+  // 待完成
   {
     title: "单元测试",
     msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
-     `,
-    type: "browser",
-  },
-  {
-    title: "前端路由及实现",
-    msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
-     `,
-    type: "browser",
-  },
-  {
-    title: "测试项目性能",
-    msg: `  
-- 减少 HTTP 请求 
-  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
-     `,
-    type: "browser",
+  - 减少 HTTP 请求 
+    - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+       `,
+    type: "test",
   },
 ];
 

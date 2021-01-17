@@ -100,7 +100,7 @@ export default {
         },
         {
           title: "单元测试",
-          id: "15",
+          id: "test",
           color: "mauve",
         },
         {
