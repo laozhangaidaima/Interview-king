@@ -24,12 +24,6 @@ let dataMsg = [
     type: "browser",
   },
   {
-    title: "简述前端性能优化",
-    msg:
-      "\n\n## 页面内容方面\n\n1. 通过文件合并、css 雪碧图、使用 base64 等方式来减少 HTTP 请求数，避免过多的请求造成等待的情况；\n2. 通过 DNS 缓存等机制来减少 DNS 的查询次数；\n3. 通过设置缓存策略，对常用不变的资源进行缓存；\n4. 通过延迟加载的方式，来减少页面首屏加载时需要请求的资源，延迟加载的资源当用户需要访问时，再去请求加载；\n5. 通过用户行为，对某些资源使用预加载的方式，来提高用户需要访问资源时的响应速度；\n\n## 服务器方面\n\n1. 使用 CDN 服务，来提高用户对于资源请求时的响应速度；\n2. 服务器端自用 Gzip、Deflate 等方式对于传输的资源进行压缩，减少传输文件的体积；\n3. 尽可能减小 cookie 的大小，并且通过将静态资源分配到其他域名下，来避免对静态资源请求时携带不必要的 cookie；\n      ",
-    type: "browser",
-  },
-  {
     title: "从输入一个url到浏览器页面展示都经历了哪些过程？",
     msg:
       "\n\n1. 首先，在浏览器地址栏中输入url\n\n2. 浏览器先查看浏览器缓存-系统缓存-路由器缓存，如果缓存中有，会直接在屏幕中显示页面内容。若没有，则跳到第三步操作。\n\n3. 在发送http请求前，需要域名解析(DNS解析)，解析获取相应的IP地址。\n\n4. 浏览器向服务器发起tcp连接，与浏览器建立tcp三次握手。\n\n5. 握手成功后，浏览器向服务器发送http请求，请求数据包。\n\n6. 服务器处理收到的请求，将数据返回至浏览器\n\n7. 浏览器收到HTTP响应\n\n8. 读取页面内容，浏览器渲染，解析html源码\n\n9. 生成Dom树、解析css样式、js交互\n\n10. 客户端和服务器交互\n\n11. ajax查询\n      ",
@@ -371,6 +365,101 @@ let dataMsg = [
   - 创建依赖收集容器，也就是消息订阅器Dep
      `,
     type: "vue",
+  },
+  {
+    title: "前端性能优化",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+  - 合并为大文件
+  - http缓存
+  - localstore缓存
+- 使用服务端渲染
+- 静态资源使用 CDN
+- 将 CSS 放在文件头部，JavaScript 文件放在底部
+- 使用字体图标 iconfont 代替图片图标
+- http缓存
+- 压缩文件
+  - gzip 压缩 需要服务器支持
+  - JavaScript：UglifyPlugin
+  - CSS ：MiniCssExtractPlugin
+  - HTML：HtmlWebpackPlugin
+- 图片懒加载 利用data-src属性
+- 能用css 就不用图片
+- 通过 webpack 按需加载代码
+- 减少重绘重排
+- flex布局 比绝对定位 相对定位 浮动定位性能好
+     `,
+    type: "browser",
+  },
+  // 待完成
+  {
+    title: "垂直居中",
+    msg: `  
+- position:absolute 
+position  : absolute
+top       : 50%
+left      : 50%
+transform : translate(-50%,-50%)
+
+     `,
+    type: "css",
+  },
+  {
+    title: "vue组件的销毁",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
+  },
+  {
+    title: "执行机制",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
+  },
+  {
+    title: "代码优化",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
+  },
+  {
+    title: "代码质量标准",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
+  },
+  {
+    title: "单元测试",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
+  },
+  {
+    title: "前端路由及实现",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
+  },
+  {
+    title: "测试项目性能",
+    msg: `  
+- 减少 HTTP 请求 
+  - 完整HTTP请求需要经历 DNS 查找，TCP 握手，浏览器发出 HTTP 请求，服务器接收请求，服务器处理请求并发回响应，浏览器接收响应等过程。
+     `,
+    type: "browser",
   },
 ];
 
