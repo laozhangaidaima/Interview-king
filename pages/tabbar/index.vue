@@ -73,12 +73,6 @@ export default {
           color: "orange",
         },
         {
-          title: "设计模式",
-          id: "9",
-          color: "olive",
-        },
-
-        {
           title: "面向对象",
           id: "object",
           color: "grey",
@@ -107,6 +101,11 @@ export default {
           title: "代码质量",
           id: "codeReview",
           color: "olive",
+        },
+        {
+          title: "面试技巧",
+          id: "interView",
+          color: "cyan",
         },
       ],
     };

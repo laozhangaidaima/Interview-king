@@ -183,7 +183,7 @@ let dataMsg = [
     msg: `  
 - 规范项目目录 脚手架
 - eslint 提交代码审查
-- .EditorConfig文件 统一编辑器 编码样式
+- .EditorConfig文件 统一编辑器 编码样式 UTF-8
      `,
     type: "codeReview",
   },
@@ -235,14 +235,6 @@ let dataMsg = [
     - call或者apply  
     - prototype
     - extend
-  - m：模型（Model）：数据保存
-  - v：视图（View）：用户界面
-  - c：控制器（Controller）：业务逻辑
-  - 所有通信都是单向的。
-  - View 传送指令到 Controller
-  - Controller 完成业务逻辑后，要求 Model 改变状态
-  - Model 将新的数据发送到 View，用户得到反馈
-  - 数据流向是一个环
 - 多态
   - 同一操作作用于不同的对象上面，可以产生不同的解释和不同的执行结果
   - 类似条件分支
@@ -394,18 +386,28 @@ let dataMsg = [
   },
   {
     title: "垂直居中",
-    msg: `  
-- position:absolute和transform 
-  - 
+    msg: ` 
+- 行内元素
+  - 水平居中：text-align: center; 
+  - 垂直居中：height: 20px;line-height: 20px;
+- 块级元素
+  - 水平居中：margin: auto   
+  - 一个行内元素，就对它的父容器应用 text-align: center；
+  - 如果它是一个块级元素，就对它自身应用 margin: auto或者 margin: 0 auto。
+- 通用
+  - position:absolute和transform 
+    - 
 position  : absolute
 top       : 50%
 left      : 50%
 transform : translate(-50%,-50%)
-- flex
-  - 
+  - flex通用
+    - 
 display: flex;
 justify-content: center; 
 align-items: center; 
+  - flex 布局 + margin: auto（推荐）
+    - 子元素设置我们再熟悉不过的 margin: auto即可
 - 其他方法 需要知道父盒子宽高 通用性不强 不记
      `,
     type: "css",
@@ -468,6 +470,104 @@ align-items: center;
 - 白屏
 - 首屏时间
 - 交互花费时间
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "渲染引擎（浏览器内核）和js引擎",
+    msg: `  
+- 渲染引擎
+  - 作用：读取网页内容，计算网页的显示方式并显示在页面上。
+  - 浏览器兼容性问题出现的根本原因。
+  - chrome：blink  IE：trident
+- JS 引擎
+  - 执行 JS 代码 
+  - 逐行解释执行 转换为机器语言
+  - js是脚本语言 翻译一行，执行一行
+  - chrome：v8  IE：trident
+     `,
+    type: "html",
+  },
+  {
+    title: "html是什么",
+    msg: `  
+- 超文本标记语言 非编程语言 没有编译过程
+- 只负责语义，不负责样式
+     `,
+    type: "html",
+  },
+  {
+    title: "伪类和伪元素的区别是什么？",
+    msg: `  
+- 伪类：表示一种状态
+- 伪元素：是真的有元素。比如 ::after 是真的有元素，可以在页面上显示内容。
+- 伪类：使用单冒号
+- 伪元素：使用双冒号
+- 常见伪类：
+  - :link  未访问的链接
+  - :visited  已访问的链接
+  - :hover 鼠标指针浮动在其上的元素
+  - :focus 获取焦点的输入字段
+  - :first-child 匹配元素的第一个子元素。
+  - :last-child 匹配元素的最后一个子元素。
+  - :nth-child  匹配一个或者多个元素
+- 常见伪元素
+  - ::before 被选元素前插入内容
+  - ::after 被选元素后插入内容
+  - ::first-letter 匹配首字母
+  - ::first-line 匹配第一行的文本
+  - ::placeholder 文本样式
+     `,
+    type: "css",
+  },
+  {
+    title: "项目把控能力，合格的项目经理？",
+    msg: `  
+- 扎实的技术能力，有技术深度，广度
+- 良好的沟通能力
+- 项目管理经验与专业知识技能
+- 用数据说话
+- 对业务的理解程度
+- 工具使用的能力
+- 项目把控能力
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "技术深度是什么？",
+    msg: `  
+- 第一层 会调用api
+- 第二层 知道api怎么实现 为什么这样设计 有什么优点缺点
+- 第三层 会实现api
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "技术广度是什么？",
+    msg: `  
+- 会的东西多
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "什么是业务？",
+    msg: `  
+- 核心：钱从哪里来
+- 用户留存
+- 用户付费
+- 为用户创造价值
+- 螺丝钉岗位是看不到业务整体流程
+- 前端没那么理解业务 是不知道数据是从哪里来的 怎么设计的
+- 谁的工作重要 数据从哪里来 谁就更能理解业务
+- 游戏业务就是主要靠前端
+     `,
+    type: "codeReview",
+  },
+  {
+    title: "遇到不知道的问题？",
+    msg: `  
+- 我回去研究一下
+- 这方面我没有经验，能不能指点一下？
      `,
     type: "codeReview",
   },
