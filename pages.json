@@ -113,7 +113,14 @@
 			"path": "pages/base/index",
 			"style": {}
 		}
-	],
+	    ,{
+            "path" : "pages/remember/index",
+            "style" :                                                                                    
+            {
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"mp-alipay": {
 			/* 支付宝小程序特有相关 */
@@ -135,25 +142,25 @@
 				"query": "" //启动参数
 			}
 		]
-	},
-	"tabBar": {
-		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
-		"borderStyle": "black",
-		"backgroundColor": "#ffffff",
-		"list": [
-			{
-				"pagePath": "pages/tabbar/index",
-				"iconPath": "static/BasicsBg.png",
-				"selectedIconPath": "static/BasicsBg.png",
-				"text": "组件"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/BasicsBg.png",
-				"selectedIconPath": "static/BasicsBg.png",
-				"text": "接口"
-			}
-		]
 	}
+	// "tabBar": {
+	// 	"color": "#7A7E83",
+	// 	"selectedColor": "#3cc51f",
+	// 	"borderStyle": "black",
+	// 	"backgroundColor": "#ffffff",
+	// 	"list": [
+	// 		{
+	// 			"pagePath": "pages/tabbar/index",
+	// 			"iconPath": "static/BasicsBg.png",
+	// 			"selectedIconPath": "static/BasicsBg.png",
+	// 			"text": "组件"
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/index/index",
+	// 			"iconPath": "static/BasicsBg.png",
+	// 			"selectedIconPath": "static/BasicsBg.png",
+	// 			"text": "接口"
+	// 		}
+	// 	]
+	// }
 }
