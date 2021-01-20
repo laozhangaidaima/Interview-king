@@ -54,7 +54,7 @@ export default {
 
 <style>
 .page {
-  height: 100vh;
-  /* margin-top: 200upx; */
+  /* height: 100vh; */
+  margin-top: 100upx;
 }
 </style>
