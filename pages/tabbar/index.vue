@@ -43,6 +43,11 @@ export default {
           id: "js",
           color: "pink",
         },
+        {
+          title: "http",
+          id: "http",
+          color: "pink",
+        },
       ],
     };
   },
