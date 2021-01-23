@@ -110,17 +110,14 @@
 			"style": {}
 		},
 		{
-			"path": "pages/base/index",
+			"path": "pages/remember/index",
+			"style": {}
+		},
+		{
+			"path": "pages/list/index",
 			"style": {}
 		}
-	    ,{
-            "path" : "pages/remember/index",
-            "style" :                                                                                    
-            {
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"mp-alipay": {
 			/* 支付宝小程序特有相关 */

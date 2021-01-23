@@ -1,9 +1,7 @@
 <template>
   <view class="bg-cyan pages" @click="randomMsg(msgItem)">
     <view class="padding text-center text-size">{{ title }}</view>
-    <view class="main">
-      {{ msg }}
-    </view>
+    <view class="main"> {{ index + 1 }}: {{ msg }} </view>
   </view>
 </template>
 
@@ -14,14 +12,15 @@ export default {
   data() {
     return {
       msg: "",
-	  msgItem: [],
-	  title:''
+      msgItem: [],
+      title: "",
+      index: 0,
     };
   },
   created() {},
   onLoad: function (option) {
-	//option为object类型，会序列化上个页面传递的参数
-	this.title = option.title
+    //option为object类型，会序列化上个页面传递的参数
+    this.title = option.title;
     for (const key in dataMsg) {
       if (key === option.id) {
         this.msgItem = dataMsg[key];
@@ -32,8 +31,8 @@ export default {
   },
   methods: {
     randomMsg(data) {
-      let index = Math.floor(Math.random() * data.length);
-      this.msg = data[index];
+      this.index = Math.floor(Math.random() * data.length);
+      this.msg = data[this.index];
     },
   },
 };
@@ -54,7 +53,7 @@ page {
   height: 50vh;
   font-size: 24px;
 }
-.text-size{
-	font-size: 30px;
+.text-size {
+  font-size: 30px;
 }
 </style>

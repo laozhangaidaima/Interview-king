@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>微信小程序面试题丨阿西河</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAB1UExURQAAAAgICBQUFAwMDAAAAAAAAP///wAAAAAAAAAAAFpaWmBgYOTk5Pr6+vHx8RcXF3d3dxwcHElJSaurq01NTejo6Ovr68vLy5GRkS4uLo+Pj6CgoAICAtPT0w8PD7m5ueDg4IODg/39/T4+PsTExKKiorCwsP9zlqMAAAAKdFJOU+r////p///83PJJmN3tAAAAfUlEQVQY02XPNwKCUBQF0Qf8ueSczFn3v0QLEVGnPN1YFNuiOLKQr0JzAARNVwLgzAA4Sy0ANkEmXQ4LuOrRKl3AXV2j2we8XJ4n1TMkGmFUNcNR+TDk2r+hlLK+P0nrCSoVHuwybV4QFNoCrCQfM0eQJjVAmaQ+7n/ud/8Jx3QHLeinSEwAAAAASUVORK5CYII=">
+    <link rel="apple-touch-icon" href="https://a.axihe.com/assets-area/mobile-icon.png?t=201911160050">
+    <meta name="apple-mobile-web-app-title" content="阿西河教程">
+    <link rel="stylesheet" href="https://c.axihe.com/public.css?t=20210112">
+</head>
+
+<body>
+    <div id="axihe-home">
+        <header id="axihe-header">
+            <div class="container">
+                <div class="axi-flex axi-flex-justify">
+                    <div class="axi-flex"><a class="website-title-wrap" href="/"><strong
+                                class="website-title">阿西河</strong></a>
+                        <p class="website-map" id="j-website-map" axihe="map" title="点击鼠标进行查看">所有教程 <i></i></p>
+                    </div>
+                    <div class="axi-flex">
+                        <div class="header-item axi-search"><input class="search-input" id="search-input" name="s"
+                                placeholder="输入您要搜索的内容……" autocomplete="off"></div>
+                        <div class="header-item weixin-mp" id="qrcode-trg">公众号</div>
+                        <div class="header-item display-mode" id="switch-theme" title="切换黑/白主题">🌙</div>
+                    </div>
+                </div>
+                <div id="qrcode" class="qrcode"><img src="https://a.axihe.com/ad-area/axihe-qrcode.png?t=20200701"
+                        alt="阿西河前端的公众号"></div>
+                <div class="map-detail" id="j-map-detail" axihe="map">
+                    <div class="axi-flex map-detail-main">
+                        <div class="axi-flex-item map-detail-left scrollbar">
+                            <h2 class="detail-left-title">我的收藏</h2>
+                            <ul id="stars-wrap"></ul>
+                            <h2 class="detail-left-title detail-left-history">最近访问 <span
+                                    class="history-article">&nbsp;(文章)</span></h2>
+                            <ul id="history-wrap"></ul>
+                        </div>
+                        <div class="axi-flex-item4 map-detail-right">
+                            <h2 class="detail-right-title">教程列表</h2>
+                            <div class="detail-right-main scrollbar" id="j-map-detail-right">
+                                <div class="edu-area-wrap">
+                                    <div class="edu-area"><strong class="edu-area-tit">HTML</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/html/edu/home.html">HTML 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/html5/edu/home.html">HTML5 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/html.html">HTML 标签速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/api/html/html-doc/api.html">HTML 标签</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/map/html-search.html">HTML 常见搜索</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">CSS</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/css/edu/home.html">CSS 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/css3/edu/home.html">CSS3 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/css.html">CSS 属性速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/api/css/res/css-reference.html">CSS
+                                                    参考手册</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/anbang/blog/css/reset-css.html">reset.css</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">JavaScript</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/js/home.html">JavaScript 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/es6/home.html">ES6 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/ecmascript.html">ECMAScript 速查表</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/webassembly/home.html">WebAssembly</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/http/home.html">HTTP 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/ajax/home.html">AJAX 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/typescript/home.html">TypeScript
+                                                    教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/coffeescript/home.html">CoffeeScript
+                                                    教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/json/home.html">JSON 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/js-main.html">JavaScript 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/js-use-main.html">JS 语法糖专题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/ajax.html">通信方式专题</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/ten-sorting/home.html">十大经典排序算法</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/regexp/home.html">正则表达式</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">CSS库</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/stylus/edu/home.html">Stylus 教程</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/sass/edu/home.html">Sass 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/less/edu/home.html">Less 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/postcss/home.html">PostCSS 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/bootstrap4/edu/home.html">Bootstrap
+                                                    教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/bootstrap.html">Bootstrap 生态库</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/easyui/edu/home.html">EasyUI 教程</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/foundation/edu/home.html">Foundation
+                                                    教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/font-awesome/edu/home.html">Font
+                                                    Awesome 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/iconfont/edu/home.html">Iconfont
+                                                    教程</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/svg/edu/home.html">SVG 教程</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">jQuery</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/jquery/edu/home.html">jQuery</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/jqueryui/edu/home.html">jQuery UI</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/jquerymobile/edu/home.html">jQuery
+                                                    Mobile</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/validate/jquery-validation.html">jQuery
+                                                    Validate</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/cookie/jquery-cookie.html">jQuery
+                                                    Cookie</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/form/jquery-form.html">jQuery Form</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/layout/jquery-isotope.html">jQuery
+                                                    isotope</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/form/jquery-autocomplete.html">jQ
+                                                    Autocomplete</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/load/jquery-imagesloaded.html">jQ
+                                                    imagesloaded</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/load/jquery_lazyload.html">jQuery
+                                                    lazyload</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/animate/jquery-transit.html">jQuery
+                                                    transit</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/drag/jquery-gridster.html">jQuery
+                                                    gridster</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/jquery-plugin/tip-popup/jquery-noty.html">jQuery noty</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/map/jquery.html">jQuery 插件库</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">React</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/react/home.html">React</a></li>
+                                            <li><span>&#9733;</span><a href="/map/reactjs.html">React.js 速查表</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/react/create-react-app/home.html">Create-react-app</a></li>
+                                            <li><span>&#9733;</span><a href="/react/react-redux/home.html">React
+                                                    Redux</a></li>
+                                            <li><span>&#9733;</span><a href="/react/ant-design/home.html">Ant Design</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/react/react-native/home.html">React
+                                                    Native</a></li>
+                                            <li><span>&#9733;</span><a href="/react/nextjs/home.html">Next.js</a></li>
+                                            <li><span>&#9733;</span><a href="/react/react-vr/home.html">React VR</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/react/react-boilerplate/home.html">React
+                                                    Boilerplate</a></li>
+                                            <li><span>&#9733;</span><a href="/react/draftjs/home.html">Draft.js</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/react/react-select/home.html">React-Select</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/react/react-native-web/home.html">React-native-web</a></li>
+                                            <li><span>&#9733;</span><a href="/react/gatsbyjs/home.html">Gatsby.js</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/react/taro/home.html">Taro</a></li>
+                                            <li><span>&#9733;</span><a href="/map/react.html">React常用包</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">Vue.js</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/vue/home.html">Vue.js</a></li>
+                                            <li><span>&#9733;</span><a href="/map/vuejs.html">Vue.js 速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/vuex/home.html">Vuex</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/vue-router/home.html">Vue Router</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/vue/vue-cli/home.html">Vue-cli</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/element/home.html">Element UI</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/vue/vue-lazyload/home.html">Vue-lazyload</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/vue-admin/home.html">Vue-admin</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/vue/vee-validate/home.html">VeeValidate</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/weex/home.html">Weex</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/nuxtjs/home.html">Nuxt.js</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/vuepress/home.html">VuePress</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/docsify/home.html">Docsify</a></li>
+                                            <li><span>&#9733;</span><a href="/vue/vue-i18n/home.html">Vue-i18n</a></li>
+                                            <li><span>&#9733;</span><a href="/map/vue.html">Vue.js 常用包</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">Angular</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/angular/home.html">Angular</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/ionic/home.html">Ionic</a></li>
+                                            <li><span>&#9733;</span><a href="/angular/ui-router/home.html">Ui-router</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/restangular/home.html">Restangular</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/angular-loading-bar/home.html">Loading-bar</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/protractor/home.html">Protractor</a></li>
+                                            <li><span>&#9733;</span><a href="/angular/primeng/home.html">Primeng</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/ng-file-upload/home.html">Ng-file-upload</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/angular-meteor/home.html">Angular-meteor</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/ng-datepicker/home.html">Angular-datepicker</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/ng-validation/home.html">Angular-validation</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/ng-zorro-antd/home.html">Angular-zorro-antd</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/angular/ng-pipes/home.html">Angular-pipes</a></li>
+                                            <li><span>&#9733;</span><a href="/map/angular.html">Angular 常用包</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">后端</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/nodejs/home.html">Node.js 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/nodejs.html">Node.js 速查表</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/api/nodejs/description/api-description.html">Node.js 文档</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/express/home.html">Express</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/koa/home.html">Koa</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/nestjs/home.html">Nest.js</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/egg/home.html">Egg.js</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/deno/home.html">Deno 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/map/deno.html">Deno 速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/api/deno/home.html">Deno 文档</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">数据库</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/sql/home.html">SQL</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/mysql/home.html">MySQL</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/postgresql/home.html">PostgreSQL</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/edu/mongodb/home.html">MongoDB</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/redis/home.html">Redis</a></li>
+                                            <li><span>&#9733;</span><a href="/api/redis/home.html">Redis 命令</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">开发工具</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a
+                                                    href="/edu/chromedevtools/home.html">Chrome开发工具</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/tools/markdown/hello/tutorial.html">Markdown</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/vim/home.html">Vim</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/sublimetext/home.html">Sublime</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/tools/atom/home.html">Atom</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/idea/home.html">IDEA</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/vscode/home.html">VSCode</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/webstorm/home.html">WebStorm</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/tools/emacs/home.html">Emacs</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/tools/dreamweaver/home.html">Dreamweaver</a></li>
+                                            <li><span>&#9733;</span><a href="/map/editor.html">编辑器 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/mobaxterm/home.html">MobaXterm</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/tools/ftp/home.html">FTP</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/git/home.html">Git</a></li>
+                                            <li><span>&#9733;</span><a href="/map/effective.html">效率工具 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/svn/home.html">SVN</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/emoji/home.html">Emoji 表情大全</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">Npm</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/npm/home.html">NPM 教程</a></li>
+                                            <li><span>&#9733;</span><a href="/api/npm/api/api.html">NPM 文档</a></li>
+                                            <li><span>&#9733;</span><a href="/map/npm-search.html">NPM 速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/meteor/home.html">Meteor</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/gulp/home.html">Gulp</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/grunt/home.html">Grunt</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/nrm/home.html">Nrm</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/nvm/home.html">Nvm</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/webpack/home.html">Webpack</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/parcel/home.html">Parcel</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/mocha/home.html">Mocha</a></li>
+                                            <li><span>&#9733;</span><a href="/npm/eslint/home.html">ESLint</a></li>
+                                            <li><span>&#9733;</span><a href="/map/npm.html">Npm 常用包</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">抓包专区</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a
+                                                    href="/tools/charles/charles/tutorial.html">Charles</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/fiddler/home.html">Fiddler</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/wireshark/home.html">Wireshark</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">测试专区</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/tools/jenkins/home.html">Jenkins</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/jmeter/home.html">JMeter</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/locust/home.html">Locust</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/postman/home.html">PostMan</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/selenium/home.html">Selenium</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/tools/xmind/home.html">XMind</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/navicat/home.html">Navicat</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/testlink/home.html">TestLink</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">网站搭建</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/website/domain/home.html">域名注册</a></li>
+                                            <li><span>&#9733;</span><a href="/website/host/home.html">虚拟主机</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/wordpress/home.html">WordPress</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/website/drupal/home.html">Drupal</a></li>
+                                            <li><span>&#9733;</span><a href="/website/joomla/home.html">Joomla</a></li>
+                                            <li><span>&#9733;</span><a href="/website/discuz/home.html">Discuz</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/web/home.html">网站建设</a></li>
+                                            <li><span>&#9733;</span><a href="/tools/browsers/home.html">浏览器信息</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/quality/home.html">开发规范</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/tcpip/home.html">TCP/IP</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/w3c/home.html">W3C 标准</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/rss/home.html">RSS</a></li>
+                                            <li><span>&#9733;</span><a href="/website/seo/home.html">SEO</a></li>
+                                            <li><span>&#9733;</span><a href="/map/website-build.html">快速建站专题</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">区块链</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/block/block/home.html">区块链</a></li>
+                                            <li><span>&#9733;</span><a href="/block/block/technology.html">区块链技术</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/block/block/what.html">区块链是什么</a></li>
+                                            <li><span>&#9733;</span><a href="/block/block/dev.html">区块链开发</a></li>
+                                            <li><span>&#9733;</span><a href="/block/block/bbs.html">区块链论坛</a></li>
+                                            <li><span>&#9733;</span><a href="/block/btc/what.html">比特币是什么</a></li>
+                                            <li><span>&#9733;</span><a href="/block/btc/white-paper.html">比特币白皮书</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/block/eth/home.html">以太坊</a></li>
+                                            <li><span>&#9733;</span><a href="/block/eth/white-paper.html">以太坊白皮书</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/block/eth-smart-contract/home.html">以太坊智能合约</a></li>
+                                            <li><span>&#9733;</span><a href="/block/web3js/home.html">Web3.js</a></li>
+                                            <li><span>&#9733;</span><a href="/block/solidity/home.html">Solidity</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/block/truffle/home.html">Truffle</a></li>
+                                            <li><span>&#9733;</span><a href="/block/open-zeppelin/home.html">Open
+                                                    Zeppelin</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">Linux</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/linux/home.html">Linux</a></li>
+                                            <li><span>&#9733;</span><a href="/map/linux.html">Linux 命令速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/api/linux-commands/home.html">Linux
+                                                    命令大全</a></li>
+                                            <li><span>&#9733;</span><a href="/edu/shell/home.html">Shell</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">Docker</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/docker/home.html">Docker</a></li>
+                                            <li><span>&#9733;</span><a href="/map/docker.html">Docker 命令速查表</a></li>
+                                            <li><span>&#9733;</span><a href="/api/docker/home.html">Docker 命令</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">站长专区</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/anbang/blog/home.html">朱安邦的博客</a></li>
+                                            <li><span>&#9733;</span><a href="/anbang/chat/home.html">安邦聊前端</a></li>
+                                            <li><span>&#9733;</span><a
+                                                    href="/anbang/js/edu/home.html">安邦的JavaScript学习笔记</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">前端面试题</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/edu/ask.html">WEB前端面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/html-focus.html">HTML 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/css-focus.html">CSS 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/js-focus.html">JavaScript 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/jquery-focus.html">jQuery 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/vue-focus.html">Vue.js 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/react-focus.html">React.js 面试题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/map/logic-focus.html">算法 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/ajax-focus.html">AJAX/HTPP 面试题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/map/tools-focus.html">辅助工具 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/babel-focus.html">Babel 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/bootstrap-focus.html">Bootstrap
+                                                    面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/electron-focus.html">Electron 面试题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/map/gulp-focus.html">Gulp 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/nodejs-focus.html">Nodejs 面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/other-focus.html">前端经验相关的面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/web-focus.html">前端综合面试题</a></li>
+                                            <li><span>&#9733;</span><a href="/map/webpack-focus.html">Webpack 面试题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/map/wechat-focus.html">微信小程序面试题</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edu-area"><strong class="edu-area-tit">专题区域</strong>
+                                        <ul>
+                                            <li><span>&#9733;</span><a href="/topic/interview.html">前端面试 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/html.html">HTML 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/css.html">CSS 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/javascript.html">JavaScript 专题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/topic/typescript.html">TypeScript 专题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/topic/jquery.html">jQuery 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/react.html">React 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/vue.html">Vue.js 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/angular.html">Angular 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/nodejs.html">Node.js 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/deno.html">Deno 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/npm.html">Npm 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/bootstrap.html">Bootstrap 专题</a>
+                                            </li>
+                                            <li><span>&#9733;</span><a href="/topic/git.html">Git 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/webpack.html">Webpack 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/wechat.html">微信小程序 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/editor.html">编辑器 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/capture.html">抓包 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/markdown.html">Markdown 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/github.html">Github 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/regexp.html">正则表达式 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/gulp.html">Gulp.js 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/block.html">区块链 专题</a></li>
+                                            <li><span>&#9733;</span><a href="/topic/linux.html">Linux 专题</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="axihe-bodyer">
+            <div class="container">
+                <link rel="stylesheet" href="https://c.axihe.com/map_panel.css?t=20210112">
+                <div class="map-area">
+                    <h1 class="map-title">微信小程序面试题</h1>
+                    <p class="map-sub-tit">包含 微信小程序 相关的面试题</p>
+                    <p class="map-tips">可以通过按 <strong>Ctrl+F</strong> 搜索快速定位</p>
+                    <p></p>
+                    <div id="example" class="map-panel">
+                        <div class="col axitwo">
+                            <dl>
+                                <dt>综合</dt>
+                                <dd><a href="/focus/wechat/001.html">微信⼩程序有⼏个⽂件</a></dd>
+                                <dd><a href="/focus/wechat/002.html">微信⼩程序怎样跟事件传值</a></dd>
+                                <dd><a href="/focus/wechat/003.html">⼩程序的 wxss 和 css 有哪些不⼀样的地⽅？</a></dd>
+                                <dd><a href="/focus/wechat/004.html">⼩程序关联微信公众号如何确定⽤户的唯⼀性</a></dd>
+                                <dd><a href="/focus/wechat/005.html">微信⼩程序与vue区别</a></dd>
+                                <dd><a href="/focus/wechat/006.html">微信⼩程序 登录</a></dd>
+                                <dd><a href="/focus/wechat/007.html">微信⼩程序 图⽚导出</a></dd>
+                                <dd><a href="/focus/wechat/008.html">微信⼩程序 数据统计</a></dd>
+                                <dd><a href="/focus/wechat/009.html">微信⼩程序 ⼯程化</a></dd>
+                            </dl>
+                        </div>
+                        <div class="col axitwo">
+                            <dl>
+                                <dt>广告区<em>广告收入用于本站维护的支出</em></dt><ins class="adsbygoogle" style="display:block"
+                                    data-ad-client="ca-pub-3504340093271389" data-ad-slot="3779149714"
+                                    data-ad-format="auto" data-full-width-responsive="true"></ins>
+                                <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
+                            </dl>
+                        </div>
+                        <div class="col axinine">
+                            <dl>
+                                <dt>重点<em>XXXX</em></dt>
+                                <dd><a href="/focus/wechat/010.html">微信⼩程序 架构</a></dd>
+                                <dd><a href="/focus/wechat/011.html">微信⼩程序 WXML &amp;&amp; WXSS</a></dd>
+                                <dd><a href="/focus/wechat/012.html">微信⼩程序的问题</a></dd>
+                                <dd><a href="/focus/wechat/013.html">微信⼩程序授权获取⽤户信息流程</a></dd>
+                                <dd><a href="/focus/wechat/014.html">微信⼩程序性能优化</a></dd>
+                                <dd><a href="/focus/wechat/015.html">微信⼩程序 wepy vs mpvue</a></dd>
+                                <dd><a href="/focus/wechat/016.html">微信⼩程序 mpvue</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <script>var defaultWidth = 380</script>
+                    <p></p>
+                </div>
+            </div>
+            <script src="https://a.axihe.com/assets-area/jquery.min.js"></script>
+            <script src="https://a.axihe.com/assets-area/jquery.wookmark.min.js"></script>
+        </div>
+        <footer id="axihe-footer">
+            <div class="container">
+                <div class="axi-flex axi-flex-justify footer-top">
+                    <section class="footer-top-left">
+                        <div class="domain-area"><span class="domain-value"><span class="main">AXIHE</span>
+                                <span>.COM</span> </span><span>始于2018年2月</span></div>
+                        <p>阿西河前端教程不仅有传统的HTML、CSS、JS、jQuery、Vue、React、Angular等教程，还包含Nodejs，Linux，Docker，数据库相关的内容，帮助您走向以JavaScript为核心的全栈开发道路。
+                        </p>
+                    </section>
+                    <section class="footer-top-right">
+                        <h3 class="footer-top-right-title">优质前端博客</h3>
+                        <div class="friend-link-wrap"><a href="https://www.qiutianaimeili.com/"
+                                target="_blank">秋天爱美丽</a> <a href="https://www.wuyabala.com/" target="_blank">佩恩的博客</a>
+                            <a href="/console/abouts/links.html"><strong>申请出现</strong></a></div>
+                    </section>
+                </div>
+                <div class="footer-bottom"><a class="icp-number" target="_blank" rel="nofollow"
+                        href="http://www.beian.miit.gov.cn">皖ICP备16025137号-3 </a>&ensp; <a class="friends-link"
+                        href="/map/links.html">友情链接</a></div>
+            </div>
+        </footer>
+        <script src="https://c.axihe.com/public.js?t=20210112"></script>
+        <script src="//at.alicdn.com/t/font_1944264_p1dw02mkgwl.js"></script>
+        <script>
+        let arr = document.getElementsByTagName("a");
+        let text = [];
+        for (let i = 0; i < arr.length; i++) {
+            text.push(arr[i].innerText);
+        }
+        console.log("🚀 ~ file: test.html ~ line 1662 ~ text", text)
+      </script>
+    </div>
+</body>
+
+</html>
