@@ -120,6 +120,7 @@ export default {
 @import "colorui/icon.css";
 page {
   margin-top: var(--status-bar-height);
+  overflow: hidden;
 }
 .nav-list {
   display: flex;

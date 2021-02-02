@@ -7,7 +7,6 @@
         class="cu-item"
         v-for="(item, index) in elements"
         :key="index"
-        :style="[{ animation: 'show ' + ((index + 1) * 0.5 + 1) + 's 1' }]"
       >
         <view class="content" @tap="showModal(item)">
           <text class="text-grey">{{ item.title }}</text>
